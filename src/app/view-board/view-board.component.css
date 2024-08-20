@@ -1,0 +1,69 @@
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.btnEdit {
+  cursor: pointer;
+  background-color: rgb(126, 193, 33);
+  padding: 12px;
+  width: 120px;
+  border: none;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 15px;
+  /* transition: 1s; */
+  box-shadow: rgb(0, 0, 0) 9px 9px 9px -13px;
+  font-weight: 550;
+  margin-right: 5px;
+}
+
+.btnDelete {
+  cursor: pointer;
+  background-color: rgb(235, 61, 61);
+  padding: 12px;
+  width: 120px;
+  border: none;
+  border-radius: 9px;
+  color: #f6f1f1;
+  font-size: 15px;
+  /* transition: 1s; */
+  box-shadow: rgb(0, 0, 0) 9px 9px 9px -13px;
+  font-weight: 550;
+  margin-right: 5px;
+}
+.viewBoardCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cardCheckbox {
+  display: flex;
+  flex-direction: column;
+}
+.toBoardCard {
+  position: fixed;
+  bottom: 6px;
+  left: 14px;
+  max-width: 100%;
+}
+.btnToBoard {
+  cursor: pointer;
+  border: solid rgb(232, 221, 170);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 14px;
+  transition: 2s;
+  width: 146px;
+  box-shadow: rgb(0, 0, 0) 9px 9px 10px -10px;
+  border-radius: 15px;
+  background: rgb(232, 221, 170);
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  padding-right: 22px;
+}

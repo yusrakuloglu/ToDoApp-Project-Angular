@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>{{ data.editMode ? "Edit Card" : "New Card" }}</h2>
+<!-- Çoklu task ekleme olabileceğinden formlarla çalışmak uğraştırıcı olabileceğinden ngModel ile çalıştık. Yani inputumuza ngmodel ile ulaşacağız. -->
+<mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Topic</mat-label>
+    <input [(ngModel)]="title" matInput />
+  </mat-form-field>
+  <div *ngFor="let task of tasksLoop; let i = index">
+    <mat-form-field appearance="fill" style="width: 90%">
+      <mat-label>Task{{ i + 1 }}</mat-label>
+      <input [(ngModel)]="tasks[i]" matInput />
+    </mat-form-field>
+    <span (click)="deleteTask(i)" class="material-symbols-outlined btnDelete">
+      delete
+    </span>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="display: flex; justify-content: flex-start">
+  <button class="btnAddTask" (click)="addNewTask()">Add New Task</button>
+  <button class="btnClose" (click)="close()">Close</button>
+  <button class="btnCreate" (click)="create()">
+    {{ data.editMode ? "Edit" : "Create" }}
+  </button>
+</mat-dialog-actions>

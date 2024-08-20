@@ -1,0 +1,31 @@
+<div class="btnDiv">
+  <button class="btnAddBoard" (click)="openNewBoard()">Add New Board</button>
+  <div class="filterForm">
+    <input
+      class="inputFilter"
+      type="text"
+      placeholder=""
+      (keyup)="filteredBoard($event)"
+    />
+    <label> Filter </label>
+  </div>
+</div>
+
+<div
+  *ngFor="let board of filteredBoards; let i = index"
+  [routerLink]="'/view-boards/' + i"
+  class="boardItems"
+>
+  <div>
+    {{ board.title }}
+  </div>
+  <div>
+    <span
+      class="material-symbols-outlined btnDelete"
+      style="padding: 5px 0px"
+      (click)="deleteBoard(i, $event)"
+    >
+      delete
+    </span>
+  </div>
+</div>

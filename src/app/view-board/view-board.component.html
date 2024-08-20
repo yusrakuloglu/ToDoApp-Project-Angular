@@ -1,0 +1,40 @@
+<div class="btnDiv">
+  <button class="btnAddBoard" (click)="openNewCard()">Add Task</button>
+</div>
+<div class="viewBoardCard" *ngIf="boardService.boards !== undefined">
+  <mat-card
+    *ngFor="let card of boardService.boards[boardIndex].cards!; let i = index"
+    style="margin: 15px 20px; min-width: 500px; padding: 30px 20px"
+  >
+    <mat-card-title> {{ card.title }}</mat-card-title>
+    <mat-card-content>
+      <div class="cardCheckbox">
+        <mat-checkbox
+          *ngFor="let checkbox of card.checkList; let a = index"
+          [(ngModel)]="card.status[a]"
+        >
+          {{ checkbox }}
+        </mat-checkbox>
+      </div>
+    </mat-card-content>
+
+    <mat-dialog-actions
+      style="
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+      "
+    >
+      <button class="btnDelete" (click)="deleteCard(i)">Delete Card</button>
+      <button class="btnEdit" (click)="editCard(i, card)">Edit Card</button>
+    </mat-dialog-actions>
+  </mat-card>
+</div>
+
+<div class="toBoardCard">
+  <button class="btnToBoard" [routerLink]="'/boards'">
+    <span class="material-symbols-outlined">arrow_back</span>
+    Back To Boards
+  </button>
+</div>

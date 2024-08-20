@@ -1,0 +1,57 @@
+mat-form-field {
+  width: 100%;
+}
+
+.btnClose {
+  cursor: pointer;
+  background-color: red;
+  padding: 12px;
+  width: 90px;
+  border: none;
+  border-radius: 9px;
+  color: #f3f0f0;
+  font-size: 15px;
+  transition: 2s;
+  box-shadow: rgb(0, 0, 0) 9px 9px 9px -13px;
+  font-weight: 550;
+  margin-right: 5px;
+}
+
+.btnCreate {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  padding: 12px;
+  width: 90px;
+  border: none;
+  border-radius: 9px;
+  color: #f3f0f0;
+  font-size: 15px;
+  /* transition: 1s; */
+  box-shadow: rgb(0, 0, 0) 9px 9px 9px -13px;
+  font-weight: 550;
+}
+
+.btnCreate:disabled {
+  background-color: rgb(159, 159, 159);
+  color: rgb(115, 113, 113);
+}
+.btnAddTask {
+  cursor: pointer;
+  background-color: rgb(225, 222, 222);
+  padding: 12px;
+  width: 120px;
+  border: none;
+  border-radius: 9px;
+  color: #171717;
+  font-size: 15px;
+  /* transition: 1s; */
+  box-shadow: rgb(0, 0, 0) 9px 9px 9px -13px;
+  font-weight: 550;
+  margin-right: 5px;
+}
+.btnDelete {
+  padding: 5px 0px;
+  width: 7%;
+  cursor: pointer;
+  margin-left: 3%;
+}
